@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+    background-color: #000000;
+}
+
+.keenan-face {
+    max-width: 450px;
+    margin: 0 auto;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+.eye {
+    position: absolute;
+    width: 27%;
+    height: 13%;
+}
+
+.dollar {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    background-image: url(../dollar-sign.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+}
+
+.red-star {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    border: 1px solid black;
+
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.star-left {
+    top: 25%;
+    left: 11%;
+}
+
+.star-right {
+    top: 27%;
+    right: 10%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        background-color: red;
+    }
+
+    20% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+
+    70% {
+        background-color: purple;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        background-color: red;
+    }
+}
